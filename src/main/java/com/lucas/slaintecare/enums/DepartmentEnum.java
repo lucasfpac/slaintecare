@@ -1,6 +1,6 @@
 // This code defines an enum called "DepartmentEnum" that represents different departments within a healthcare system.
 // Each enum value represents a specific department and contains information about the department's capabilities.
-package enums;
+package com.lucas.slaintecare.enums;
 
 // Here, we define the different departments as enum values with their corresponding information.
 public enum DepartmentEnum {

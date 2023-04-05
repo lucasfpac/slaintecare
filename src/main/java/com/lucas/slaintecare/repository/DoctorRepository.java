@@ -1,12 +1,12 @@
-package repository;
+package com.lucas.slaintecare.repository;
 
 import com.lucas.slaintecare.entity.Doctor;
-import enums.DepartmentEnum;
+import com.lucas.slaintecare.enums.DepartmentEnum;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
-import utils.CsvReader;
+import com.lucas.slaintecare.utils.CsvReader;
 
 public class DoctorRepository {
     private final List<Doctor> doctorList; // List to store Doctor objects

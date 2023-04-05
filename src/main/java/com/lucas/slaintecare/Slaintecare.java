@@ -2,7 +2,7 @@
 package com.lucas.slaintecare;
 
 import java.io.FileNotFoundException;
-import views.MainMenuView;
+import com.lucas.slaintecare.views.MainMenuView;
 
 // Main class for the Slaintecare application
 public class Slaintecare {

@@ -1,9 +1,9 @@
-package views;
+package com.lucas.slaintecare.views;
 
 import com.lucas.slaintecare.entity.Doctor;
 import java.util.InputMismatchException;
 import java.util.List;
-import repository.DoctorRepository;
+import com.lucas.slaintecare.repository.DoctorRepository;
 
 public class DoctorView extends ConsoleView {
     private final DoctorRepository doctorRepository;

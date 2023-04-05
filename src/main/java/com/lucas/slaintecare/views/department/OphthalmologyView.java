@@ -1,10 +1,10 @@
-package views.department; // Package declaration
+package com.lucas.slaintecare.views.department; // Package declaration
 
 import com.lucas.slaintecare.entity.Patient; // Importing required classes
-import enums.DepartmentEnum;
+import com.lucas.slaintecare.enums.DepartmentEnum;
 import java.util.InputMismatchException;
 import java.util.Scanner;
-import views.View;
+import com.lucas.slaintecare.views.View;
 
 public class OphthalmologyView extends DefaultDepartmentView implements View { // Class declaration, extending "DefaultDepartmentView" class and implementing "View" interface
     private final Scanner scanner; // Instance variable of type Scanner to read input from console

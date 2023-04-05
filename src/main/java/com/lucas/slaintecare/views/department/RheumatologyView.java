@@ -1,10 +1,10 @@
-package views.department;
+package com.lucas.slaintecare.views.department;
 
 import com.lucas.slaintecare.entity.Patient;
-import enums.DepartmentEnum;
+import com.lucas.slaintecare.enums.DepartmentEnum;
 import java.util.InputMismatchException;
 import java.util.Scanner;
-import views.View;
+import com.lucas.slaintecare.views.View;
 
 public class RheumatologyView extends DefaultDepartmentView implements View {
     private final Scanner scanner; // Scanner object for reading user input

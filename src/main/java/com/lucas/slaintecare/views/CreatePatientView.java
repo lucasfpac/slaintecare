@@ -1,8 +1,8 @@
-package views;
+package com.lucas.slaintecare.views;
 
-import enums.DepartmentEnum;
+import com.lucas.slaintecare.enums.DepartmentEnum;
 import java.util.InputMismatchException;
-import repository.PatientRepository;
+import com.lucas.slaintecare.repository.PatientRepository;
 
 public class CreatePatientView extends ConsoleView {
     private final PatientRepository patientRepository;

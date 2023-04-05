@@ -1,12 +1,12 @@
-package views.department;
+package com.lucas.slaintecare.views.department;
 
 import com.lucas.slaintecare.entity.Patient;
-import enums.DepartmentEnum;
+import com.lucas.slaintecare.enums.DepartmentEnum;
 import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
-import repository.PatientRepository;
+import com.lucas.slaintecare.repository.PatientRepository;
 
 public class DefaultDepartmentView {
     private final Scanner scanner; // Scanner object to read user input

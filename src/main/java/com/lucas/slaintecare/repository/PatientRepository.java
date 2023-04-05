@@ -1,4 +1,4 @@
-package repository;
+package com.lucas.slaintecare.repository;
 
 import com.lucas.slaintecare.entity.Patient;
 import java.util.ArrayList;

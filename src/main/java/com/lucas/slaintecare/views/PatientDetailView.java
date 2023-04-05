@@ -1,8 +1,8 @@
-package views;
+package com.lucas.slaintecare.views;
 
 import com.lucas.slaintecare.entity.Patient;
-import enums.DepartmentEnum;
-import utils.DepartmentViewsContainer;
+import com.lucas.slaintecare.enums.DepartmentEnum;
+import com.lucas.slaintecare.utils.DepartmentViewsContainer;
 
 public class PatientDetailView extends ConsoleView {
 

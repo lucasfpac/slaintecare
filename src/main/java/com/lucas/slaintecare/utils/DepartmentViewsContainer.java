@@ -1,21 +1,21 @@
-package utils;
+package com.lucas.slaintecare.utils;
 
 import com.lucas.slaintecare.entity.Patient;
-import enums.DepartmentEnum;
+import com.lucas.slaintecare.enums.DepartmentEnum;
 import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
 import java.util.Map;
-import views.View;
-import views.department.CardiologyView;
-import views.department.DefaultDepartmentView;
-import views.department.ENTView;
-import views.department.EmergencyView;
-import views.department.OBGYNView;
-import views.department.OccupationalTherapyView;
-import views.department.OncologyView;
-import views.department.OphthalmologyView;
-import views.department.RadiologyView;
-import views.department.RheumatologyView;
+import com.lucas.slaintecare.views.View;
+import com.lucas.slaintecare.views.department.CardiologyView;
+import com.lucas.slaintecare.views.department.DefaultDepartmentView;
+import com.lucas.slaintecare.views.department.ENTView;
+import com.lucas.slaintecare.views.department.EmergencyView;
+import com.lucas.slaintecare.views.department.OBGYNView;
+import com.lucas.slaintecare.views.department.OccupationalTherapyView;
+import com.lucas.slaintecare.views.department.OncologyView;
+import com.lucas.slaintecare.views.department.OphthalmologyView;
+import com.lucas.slaintecare.views.department.RadiologyView;
+import com.lucas.slaintecare.views.department.RheumatologyView;
 
 public class DepartmentViewsContainer {
     private final Map<DepartmentEnum, Class<?>> map; // Map to store department enum and corresponding view class

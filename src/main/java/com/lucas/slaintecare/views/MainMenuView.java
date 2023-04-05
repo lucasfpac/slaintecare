@@ -1,4 +1,4 @@
-package views;
+package com.lucas.slaintecare.views;
 
 import java.util.InputMismatchException;
 

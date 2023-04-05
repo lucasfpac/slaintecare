@@ -1,10 +1,10 @@
-package views;
+package com.lucas.slaintecare.views;
 
 import com.lucas.slaintecare.entity.Doctor;
 import com.lucas.slaintecare.entity.Patient;
 import java.util.InputMismatchException;
 import java.util.List;
-import repository.PatientRepository;
+import com.lucas.slaintecare.repository.PatientRepository;
 
 public class PatientListView extends ConsoleView {
 

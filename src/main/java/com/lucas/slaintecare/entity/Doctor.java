@@ -1,6 +1,6 @@
 package com.lucas.slaintecare.entity;
 
-import enums.DepartmentEnum;
+import com.lucas.slaintecare.enums.DepartmentEnum;
 
 public class Doctor {
     private String name;
