@@ -66,9 +66,13 @@ public class EmergencyView extends DefaultDepartmentView implements View {
             case 5 -> {
                 if (this.patient.getComplaints().length <= 1)
                     return; // Returns to previous menu if patient does not have complaints
-                throw new AssertionError(); // Throws AssertionError if unexpected input
+                System.out.println("\n Invalid input, please input a number"); // show menu again for invalid input
+                this.show(); // Calls the show() method again to display the menu
             }
-            default -> throw new AssertionError(); // Throws AssertionError if unexpected input
+            default -> {
+                System.out.println("\n Invalid input, please input a number"); // show menu again for invalid input
+                this.show(); // Calls the show() method again to display the menu
+            }
         }
     }
 
@@ -100,7 +104,10 @@ public class EmergencyView extends DefaultDepartmentView implements View {
             case 3 -> this.prescribeMedication(); // If option is 3, call the prescribeMedication() method
             case 4 -> this.outPatientDischarge(); // If option is 4, call the outPatientDischarge() method
             case 5 -> {return;} // If option is 5, return without doing anything
-            default -> throw new AssertionError(); // For any other value of option, throw an AssertionError
+            default -> {
+                System.out.println("\n Invalid input, please input a number"); // show menu again for invalid input
+                this.show(); // Calls the show() method again to display the menu
+            }
         }
     }   
 }

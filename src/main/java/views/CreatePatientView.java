@@ -40,7 +40,7 @@ public class CreatePatientView extends ConsoleView {
             this.scanner.nextLine();
             
             return department;
-        } catch (InputMismatchException | ArrayIndexOutOfBoundsException exception) {
+        } catch (InputMismatchException | IndexOutOfBoundsException exception) {
             System.out.println("\n Invalid input, please input a number"); // Display error message for invalid input
             return this.getDepartment(); // Retry getting department choice
         }

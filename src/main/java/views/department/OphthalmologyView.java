@@ -62,9 +62,13 @@ public class OphthalmologyView extends DefaultDepartmentView implements View { /
             }
             case 5 -> {
                 if (this.patient.getComplaints().length <= 1) return; // If user inputs 5 and patient has only one complaint, return
-                throw new AssertionError(); // If user inputs 5 and patient has more than one complaint, throw AssertionError
+                System.out.println("\n Invalid input, please input a number"); // show menu again for invalid input
+                this.show(); // Calls the show() method again to display the menu
             }
-            default -> throw new AssertionError(); // Throw AssertionError for any other user input
+            default -> {
+                System.out.println("\n Invalid input, please input a number"); // show menu again for invalid input
+                this.show(); // Calls the show() method again to display the menu
+            }
         }
     }
     private void showOutPatientMenu() {
@@ -95,7 +99,10 @@ public class OphthalmologyView extends DefaultDepartmentView implements View { /
             case 3 -> this.prescribeMedication(); // If user chooses option 3, call prescribeMedication() method
             case 4 -> this.outPatientDischarge(); // If user chooses option 4, call outPatientDischarge() method
             case 5 -> {return;} // If user chooses option 5, return without performing any action
-            default -> throw new AssertionError(); // Throw an AssertionError if user chooses an invalid option
+            default -> {
+                System.out.println("\n Invalid input, please input a number"); // show menu again for invalid input
+                this.show(); // Calls the show() method again to display the menu
+            }
         }
     }
 }    

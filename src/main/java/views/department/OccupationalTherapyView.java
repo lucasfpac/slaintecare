@@ -48,7 +48,10 @@ public class OccupationalTherapyView extends DefaultDepartmentView implements Vi
             case 1 -> this.prescribeMedication(); // If option 1 is chosen, call prescribeMedication() method
             case 2 -> this.dischargeInpatient(); // If option 2 is chosen, call dischargeInpatient() method
             case 3 -> {return;} // If option 3 is chosen, return from the method
-            default -> throw new AssertionError(); // Throw an AssertionError for any other input
+            default -> {
+                System.out.println("\n Invalid input, please input a number"); // show menu again for invalid input
+                this.show(); // Calls the show() method again to display the menu
+            }
         }
     }
 
@@ -73,7 +76,10 @@ public class OccupationalTherapyView extends DefaultDepartmentView implements Vi
             case 1 -> this.prescribeMedication(); // If option 1 is chosen, call prescribeMedication() method
             case 2 -> this.outPatientDischarge(); // If option 2 is chosen, call outPatientDischarge() method
             case 3 -> {return;} // If option 3 is chosen, return from the method
-            default -> throw new AssertionError(); // Throw an AssertionError for any other input
+            default -> {
+                System.out.println("\n Invalid input, please input a number"); // show menu again for invalid input
+                this.show(); // Calls the show() method again to display the menu
+            }
         }
     }
 }

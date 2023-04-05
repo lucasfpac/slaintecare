@@ -45,7 +45,10 @@ public class RheumatologyView extends DefaultDepartmentView implements View {
             case 1 -> this.prescribeMedication(); // Call prescribeMedication() method for option 1
             case 2 -> this.dischargeInpatient(); // Call dischargeInpatient() method for option 2
             case 3 -> {return;} // Return from method for option 3
-            default -> throw new AssertionError(); // Throw AssertionError for any other invalid option
+            default -> {
+                System.out.println("\n Invalid input, please input a number"); // show menu again for invalid input
+                this.show(); // Calls the show() method again to display the menu
+            }
         }
     }
     
@@ -71,7 +74,10 @@ public class RheumatologyView extends DefaultDepartmentView implements View {
             case 2 -> this.prescribeMedication(); // Call prescribeMedication() method for option 2
             case 3 -> this.outPatientDischarge(); // Call outPatientDischarge() method for option 3
             case 4 -> {return;} // Return from method for option 4
-            default -> throw new AssertionError(); // Throw AssertionError for any other invalid option
+            default -> {
+                System.out.println("\n Invalid input, please input a number"); // show menu again for invalid input
+                this.show(); // Calls the show() method again to display the menu
+            }
         }
     }
 }

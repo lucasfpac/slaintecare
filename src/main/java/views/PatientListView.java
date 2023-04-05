@@ -44,7 +44,7 @@ public class PatientListView extends ConsoleView {
             // Retrieve the selected patient from the patient list and display patient details in PatientDetailView
             Patient patient = patientList.get(option);
             new PatientDetailView(patient, doctor.getDepartment()).show();
-        } catch (InputMismatchException exception) {
+        } catch (InputMismatchException | IndexOutOfBoundsException exception) {
             System.out.println("\n Invalid input, please input a number");
             this.show();
             return;

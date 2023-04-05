@@ -44,7 +44,10 @@ public class RadiologyView extends DefaultDepartmentView implements View {
         switch (option) {
             case 1 -> this.transferDepartment(); // Call transferDepartment() method to transfer patient to another department
             case 2 -> {return;} // Return from the method to go back
-            default -> throw new AssertionError(); // Throw an exception for unexpected input
+            default -> {
+                System.out.println("\n Invalid input, please input a number"); // show menu again for invalid input
+                this.show(); // Calls the show() method again to display the menu
+            }
         }
     }
     
@@ -69,7 +72,10 @@ public class RadiologyView extends DefaultDepartmentView implements View {
             case 1 -> this.transferDepartment(); // Call transferDepartment() method to transfer patient to another department
             case 2 -> this.outPatientDischarge(); // Call outPatientDischarge() method to discharge patient from the department
             case 3 -> {return;} // Return from the method to go back
-            default -> throw new AssertionError(); // Throw an exception for unexpected input
+            default -> {
+                System.out.println("\n Invalid input, please input a number"); // show menu again for invalid input
+                this.show(); // Calls the show() method again to display the menu
+            }
         }
     }
 }

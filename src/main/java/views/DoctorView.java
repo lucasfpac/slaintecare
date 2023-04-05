@@ -36,7 +36,7 @@ public class DoctorView extends ConsoleView {
             
             Doctor doctor = doctorList.get(option -1); // Get the chosen doctor from the list
             new PatientListView(doctor).show(); // Create a new PatientListView with the chosen doctor and show it
-        } catch (InputMismatchException exception) {
+        } catch (InputMismatchException | IndexOutOfBoundsException exception) {
             System.out.println("\n Invalid input, please input a number"); // Handle input mismatch exception
             this.chooseDoctor(); // Call chooseDoctor() again to retry input
             return;

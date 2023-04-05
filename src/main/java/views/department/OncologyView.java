@@ -62,9 +62,13 @@ public class OncologyView extends DefaultDepartmentView implements View {
             case 5 -> {
                 // If the patient has 1 or fewer complaints, return to previous menu
                 if (this.patient.getComplaints().length <= 1) return;
-                throw new AssertionError(); // Throw an error for invalid input
+                System.out.println("\n Invalid input, please input a number"); // show menu again for invalid input
+                this.show(); // Calls the show() method again to display the menu
             }
-            default -> throw new AssertionError(); // Throw an error for invalid input
+            default -> {
+                System.out.println("\n Invalid input, please input a number"); // show menu again for invalid input
+                this.show(); // Calls the show() method again to display the menu
+            }
         }
     }
     
@@ -93,7 +97,10 @@ public class OncologyView extends DefaultDepartmentView implements View {
             case 3 -> this.prescribeMedication();
             case 4 -> this.outPatientDischarge();
             case 5 -> {return;} // Return to previous menu
-            default -> throw new AssertionError(); // Throw an error for invalid input
+            default -> {
+                System.out.println("\n Invalid input, please input a number"); // show menu again for invalid input
+                this.show(); // Calls the show() method again to display the menu
+            }
         }
     }
 }
