@@ -2,6 +2,7 @@ package repository;
 
 import com.lucas.slaintecare.entity.Doctor;
 import enums.DepartmentEnum;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
@@ -9,7 +10,7 @@ import utils.CsvReader;
 
 public class DoctorRepository {
     private final List<Doctor> doctorList; // List to store Doctor objects
-    private final String INFO_FILE = "resources/Sláintecare Doctor Info.csv"; // File path for doctor information CSV file
+    private final String INFO_FILE = "resources"+File.separator+"slaintecare_doctor_info.csv"; // File path for doctor information CSV file
     
     public DoctorRepository() {
         this.doctorList = new ArrayList<>(); // Initialize doctorList as an empty ArrayList
@@ -17,6 +18,7 @@ public class DoctorRepository {
     }
     
     private void loadDoctors() {
+        System.out.println("tteste");
         try {
             List<List<String>> records = CsvReader.readCSV(INFO_FILE, ","); // Read CSV file using CsvReader utility
             records.stream().forEach(record -> { // Process each record in the CSV file
@@ -29,6 +31,7 @@ public class DoctorRepository {
                 this.doctorList.add(new Doctor(name, this.getDepartment(department), speciality, surgeon, onDuty)); // Create Doctor object and add to doctorList
             });
         } catch (FileNotFoundException exception) {
+            exception.printStackTrace();
             // Exception handling for file not found
         }
     }
